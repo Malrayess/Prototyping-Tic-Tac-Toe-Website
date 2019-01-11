@@ -44,3 +44,24 @@ ctx.stroke();
 ctx.moveTo(0, cheight*2/3);
 ctx.lineTo(cwidth, cheight*2/3);
 ctx.stroke();
+
+/*
+String[][] grid;
+Boolean gameStop = false; // boolean to decide if players can play or not, and if someone won or not
+Boolean filled = false;
+
+grid = new String[3][3]; // initiates the grid (creates it)
+for (var c=0; c<=2; c++) { // 3 columns
+  for (var r=0; r<=2; r++) { // 3 rows
+    grid[c][r] = ""; // starts off the grid with everything being empty
+  }
+}
+Pfont drawX, drawO;
+var[] gamegrid;
+function placing(c, r, symbol) {
+  ctx.fillStyle = "#FFFFFF";
+  drawX = createFont ("TimesNewRomanPS-BoldMT-48", 55);
+  textFont(drawX, 250);
+  text(symbol, (cwidth/3)/2 + (cwidth/3)*c, cheight*r/3);
+}
+*/
