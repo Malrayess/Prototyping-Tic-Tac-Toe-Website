@@ -56,6 +56,7 @@ function initializeArray(array) { // function that initializes array
   }
 }
 
+let gamegrid = [];
 
 
 /*
