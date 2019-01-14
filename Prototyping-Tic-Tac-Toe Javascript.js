@@ -45,6 +45,19 @@ ctx.moveTo(0, cheight*2/3);
 ctx.lineTo(cwidth, cheight*2/3);
 ctx.stroke();
 
+var grid = [];
+
+function initializeArray(array) { // function that initializes array
+  for (let c = 0; c <=2; c++) {
+    array.push([]);// creates array
+    for (let r = 0; r<=2; r++) {
+      array[i].push(""); // puts 0's in array
+    }
+  }
+}
+
+
+
 /*
 String[][] grid;
 Boolean gameStop = false; // boolean to decide if players can play or not, and if someone won or not
