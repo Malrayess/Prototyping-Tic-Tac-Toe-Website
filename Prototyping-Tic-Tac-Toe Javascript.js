@@ -45,37 +45,29 @@ ctx.moveTo(0, cheight*2/3);
 ctx.lineTo(cwidth, cheight*2/3);
 ctx.stroke();
 
-var grid = [];
+var row1 = ["","",""]; // creates array of first row
+var row2 = ["","",""]; // creates array of second row
+var row3 = ["","",""]; // creates array of third row
 
-function initializeArray(array) { // function that initializes array
-  for (let c = 0; c <=2; c++) {
+var grid = [row1,row2,row3]; // creates array that groups all three previous arrays, now it became an array of arrays
+
+initializeArray(); // calls function that initializes array
+
+function initializeArray() { // function that initializes array
+  /*for (let c = 0; c <=2; c++) {
     array.push([]);// creates array
     for (let r = 0; r<=2; r++) {
-      array[i].push(""); // puts 0's in array
+      array[i].push(""); // puts (empty)'s in array
+    }
+  }*/
+
+  for (let r = 0;r < 3; r++){
+    var row = grid[r]; // row = grid[r], row = whichever row specified in brackets (1, 2, 3)
+    for (let c = 0; c < 3; c++){
+      row[c] = "r" + r.toString() + "c" + c.toString();
+      ctx.fillStyle = "#FFFFFF";
+      ctx.font = "20px Arial";
+      ctx.fillText (row[c], 20 + c * 50, 20 + r * 50); // text, x, y
     }
   }
 }
-
-let gamegrid = [];
-
-
-/*
-String[][] grid;
-Boolean gameStop = false; // boolean to decide if players can play or not, and if someone won or not
-Boolean filled = false;
-
-grid = new String[3][3]; // initiates the grid (creates it)
-for (var c=0; c<=2; c++) { // 3 columns
-  for (var r=0; r<=2; r++) { // 3 rows
-    grid[c][r] = ""; // starts off the grid with everything being empty
-  }
-}
-Pfont drawX, drawO;
-var[] gamegrid;
-function placing(c, r, symbol) {
-  ctx.fillStyle = "#FFFFFF";
-  drawX = createFont ("TimesNewRomanPS-BoldMT-48", 55);
-  textFont(drawX, 250);
-  text(symbol, (cwidth/3)/2 + (cwidth/3)*c, cheight*r/3);
-}
-*/
