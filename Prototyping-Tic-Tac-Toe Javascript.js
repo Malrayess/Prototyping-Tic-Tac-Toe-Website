@@ -67,9 +67,15 @@ function initializeArray() { // function that initializes array
 }
 document.onmousemove = function(evt) {
   //call function here
+  mousePos = getMousePosition(evt);
+  console.log(x + "," + y);
 }
-function getMousePosition() {
-
+function getMousePosition(evt) {
+  var rect = canvas.getBoundingClientRect();
+  return {
+    x: Math.round(evt.clientX - rect.left),
+    y: Math.round(evt.clientY - rect.top)
+  };
 }
 
 document.onmousemove = function(evt) {
