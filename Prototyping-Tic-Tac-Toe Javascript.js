@@ -17,8 +17,8 @@ function startup() {
 
   var canvas = document.getElementById("Canvas2");
   var ctx = canvas.getContext("2d"); //ctx = context
-  var cwidth = 500;
-  var cheight = 500;
+  var cwidth2 = 500;
+  var cheight2 = 500;
 
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, 500, 500);
@@ -26,24 +26,24 @@ function startup() {
 
   // VERTICAL LINE 1
   ctx.strokeStyle = 'white';
-  ctx.moveTo(cwidth/3, 0);
-  ctx.lineTo(cwidth/3, cheight);
+  ctx.moveTo(cwidth2/3, 0);
+  ctx.lineTo(cwidth2/3, cheight2);
   ctx.lineWidth = 7;
   ctx.stroke();
 
   // VERTICAL LINE 2
-  ctx.moveTo(cwidth*2/3, 0);
-  ctx.lineTo(cwidth*2/3, cheight);
+  ctx.moveTo(cwidth2*2/3, 0);
+  ctx.lineTo(cwidth2*2/3, cheight2);
   ctx.stroke();
 
   // HORIZONTAL LINE 1
-  ctx.moveTo(0, cheight/3);
-  ctx.lineTo(cwidth, cheight/3);
+  ctx.moveTo(0, cheight2/3);
+  ctx.lineTo(cwidth2, cheight2/3);
   ctx.stroke();
 
   // HORIZONTAL LINE 2
-  ctx.moveTo(0, cheight*2/3);
-  ctx.lineTo(cwidth, cheight*2/3);
+  ctx.moveTo(0, cheight2*2/3);
+  ctx.lineTo(cwidth2, cheight2*2/3);
   ctx.stroke();
 }
 var row1 = ["","",""]; // creates array of first row
@@ -65,12 +65,18 @@ function initializeArray() { // function that initializes array
     }
   }
 }
+document.onmousemove = function(evt) {
+  //call function here
+}
+function getMousePosition() {
 
-document.addEventListener("click", allPlacingCode());
+}
 
+document.onmousemove = function(evt) {
+  //call function here
+}
 function allPlacingCode() {
   var c, r;
-
 }
 function placing() {
 
