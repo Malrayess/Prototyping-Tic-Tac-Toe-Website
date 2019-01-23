@@ -15,8 +15,8 @@ function startup() {
   ctx.fillText("X: ", 0, 50);
   ctx.fillText("O: ", 100, 50);
 
-  var canvas = document.getElementById("Canvas2");
-  var ctx = canvas.getContext("2d"); //ctx = context
+  var canvas2 = document.getElementById("Canvas2");
+  var ctx = canvas2.getContext("2d"); //ctx = context
   var cwidth2 = 500;
   var cheight2 = 500;
 
@@ -65,25 +65,38 @@ function initializeArray() { // function that initializes array
     }
   }
 }
-document.onmousemove = function(evt) {
+
+/*document.onmousemove = function(evt) {
   //call function here
   mousePos = getMousePosition(evt);
   console.log(x + "," + y);
 }
 function getMousePosition(evt) {
-  var rect = canvas.getBoundingClientRect();
+  var rect = Canvas2.getBoundingClientRect();
   return {
     x: Math.round(evt.clientX - rect.left),
     y: Math.round(evt.clientY - rect.top)
   };
+}*/
+
+document.onmousedown = function() {
+  //call function here
+  allPlacingCode();
 }
 
-document.onmousemove = function(evt) {
-  //call function here
-}
 function allPlacingCode() {
-  var c, r;
+    var c, r;
+    var cwidth2 = 500;
+    var cheight2 = 500;
+
+    c = 0 + (cwidth2)/3;
+    r = 0 + (cheight2)/3;
+
+    if (c>= cwidth2*0 && c<=cwidth2 && r>= cheight2*0 && r<=cheight2 && grid[r] == "") {
+      console.log("hi");
+    }
 }
+
 function placing() {
 
 }
