@@ -237,8 +237,8 @@ function allPlacingCode(x, y) {
   }
 
 function updateStatus(status) { // function that updates status
-  let statusTxtX = (cwidth3)/3;
-  let statusTxtY = (cheight3)/5;
+  let statusTxtX = (cwidth3)/2;
+  let statusTxtY = (cheight3)/2;
 
 if (theme == "Dark") {
   ctx3.fillStyle = "black";
@@ -250,7 +250,7 @@ if (theme == "Dark") {
 
   ctx3.fillStyle = "#FFFFFF";
   ctx3.font = "20px Arial";
-  ctx3.fillText(status, 20, 20); // text, x, y
+  ctx3.fillText(status, 15, 50); // text, x, y
 } else if (theme == "Light") {
   ctx3.fillStyle = "white";
   ctx3.fillRect(0, 0, 200, 100);
@@ -261,7 +261,7 @@ if (theme == "Dark") {
 
   ctx3.fillStyle = "black";
   ctx3.font = "20px Arial";
-  ctx3.fillText(status, 20, 20); // text, x, y
+  ctx3.fillText(status, 15, 50); // text, x, y
 }
 }
 function placing(c, r, symbol) { // function that places or draws the X or O
