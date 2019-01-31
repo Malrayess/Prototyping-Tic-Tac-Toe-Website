@@ -5,23 +5,56 @@
     <meta charset="utf-8">
     <title>Tic-Tac-Toe Game</title>
   </head>
-    <h1>Tic-Tac-Toe</h1>
-    <h3>By: Maher Al-Rayess</h3>
+    <h1 id="title">Tic-Tac-Toe</h1>
+    <h3 id="creator">By: Maher Al-Rayess</h3>
   <body>
-        <button type="button">1-Player</button>
+        <button type="button" id="1or2switch" onclick="playerSwitch()">1-Player</button>
 
-        <button type="button">Easy Mode</button>
+        <button type="button" onclick="easyClick()">Easy Mode</button>
 
-        <button type="button">Medium Mode</button>
+        <button type="button" onclick="mediumClick()">Medium Mode</button>
 
-        <button type="button">Hard Mode</button>
+        <button type="button" onclick="hardClick()">Hard Mode</button>
 
-        <button type="button">Dark Theme</button>
+        <button type="button" id="darkLightTheme"onclick="themeSwitch()">Dark Theme</button>
 
-    <canvas id="Canvas1" width="200" height="100" style="border:1px solid #000000;"></canvas>
-    <canvas id="Canvas2" width="500" height="500" style="border:1px solid #000000;"></canvas>
+        <button type="button" onclick="reset()">Reset button(Or you can use 'r' on the keyboard!)</button>
+
+        <p>&nbsp;</p>
+
+
+    <table>
+      <td><canvas id="Canvas1" width="200" height="100" style="border:5px solid #FFFFFF;"></canvas></td>
+      <td><canvas id="Canvas3" width="200" height="100" style="border:5px solid #FFFFFF;"></canvas></td>
+    </table>
+
+    <table2>
+      <td><canvas id="Canvas2" onkeypress="keyboardR(event)" width="500" height="500" style="border:5px solid #FFFFFF;"></canvas></td>
+    </table2>
+
     <script src="Prototyping-Tic-Tac-Toe Javascript.js"></script>
 
   </body>
 
+  <style>
+    h1 {
+    color: white;
+  }
+    h3 {
+    color: white;
+  }
+  button {
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+  }
+  #Canvas1 {
+    margin: 10px;
+  }
+  #Canvas3 {
+    margin: 10px;
+  }
+  </style>
 </html>
