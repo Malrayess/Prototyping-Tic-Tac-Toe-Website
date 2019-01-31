@@ -237,9 +237,6 @@ function allPlacingCode(x, y) {
   }
 
 function updateStatus(status) { // function that updates status
-  let statusTxtX = (cwidth3)/2;
-  let statusTxtY = (cheight3)/2;
-
 if (theme == "Dark") {
   ctx3.fillStyle = "black";
   ctx3.fillRect(0, 0, 200, 100);
