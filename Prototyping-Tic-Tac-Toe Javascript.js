@@ -375,7 +375,7 @@ function placeEasyAI() { // RANDOMLY PLACES O, CANNOT BLOCK, CAN ONLY DO SO BY C
     }
     if (row1[2] == "" && row2[1] == "X" && row3[0] == "X") {
       row1[2] = "O";
-      placing(1, 2, "O");
+      placing(2, 0, "O");
       filled = true;
       return;
     }
