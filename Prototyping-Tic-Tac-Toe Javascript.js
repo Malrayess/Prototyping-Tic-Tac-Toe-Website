@@ -635,8 +635,31 @@ function checkDiagonal(xORo) { // function that checks diagonal wins
     }
   }
 }
-
+function modeSelected() {
+  if (difficulty == 1 && theme == "Dark") {
+    document.getElementById("easyAI").style.backgroundColor = "white";
+    document.getElementById("easyAI").style.color = "black";
+  } else if (difficulty == 1 && theme == "Light") {
+    document.getElementById("easyAI").style.backgroundColor = "black";
+    document.getElementById("easyAI").style.color = "white";
+  }
+  if (difficulty == 2 && theme == "Dark") {
+    document.getElementById("mediumAI").style.backgroundColor = "white";
+    document.getElementById("mediumAI").style.color = "black";
+  } else if (difficulty == 2 && theme == "Light") {
+    document.getElementById("mediumAI").style.backgroundColor = "black";
+    document.getElementById("mediumAI").style.color = "white";
+  }
+  if (difficulty == 3 && theme == "Dark") {
+    document.getElementById("hardAI").style.backgroundColor = "white";
+    document.getElementById("hardAI").style.color = "black";
+  } else if (difficulty == 3 && theme == "Light") {
+    document.getElementById("hardAI").style.backgroundColor = "black";
+    document.getElementById("hardAI").style.color = "white";
+  }
+}
 function playerSwitch() { // function for switching text of button, 1-Player <-> 2-Player
+
   if (document.getElementById("1or2switch").innerHTML == "1-Player") {
     document.getElementById("1or2switch").innerHTML = "2-Player";
     reset();
@@ -689,7 +712,9 @@ function themeSwitch() { // function for switching text of button, Dark Theme <-
   document.getElementById("mediumAI").style.color = "black";
   document.getElementById("hardAI").style.color = "black";
     reset();
+
   } else if (document.getElementById("darkLightTheme").innerHTML == "Light Theme") {
+
     document.getElementById("darkLightTheme").innerHTML = "Dark Theme";
     theme = "Dark";
     document.body.style.backgroundColor = "black";
