@@ -653,6 +653,41 @@ function themeSwitch() { // function for switching text of button, Dark Theme <-
     document.body.style.backgroundColor = "white";
     document.getElementById("title").style.color = "black";
     document.getElementById("creator").style.color = "black";
+
+//1 player
+    document.getElementById("1or2switch").style.backgroundColor = "white";
+    document.getElementById("1or2switch").style.color = "black";
+
+//theme
+    document.getElementById("darkLightTheme").style.backgroundColor = "white";
+    document.getElementById("darkLightTheme").style.color = "black";
+
+// easy button
+    document.getElementById("easyAI").style.backgroundColor = "white";
+    document.getElementById("mediumAI").style.backgroundColor = "white";
+    document.getElementById("hardAI").style.backgroundColor = "white";
+
+    document.getElementById("easyAI").style.color = "black";
+    document.getElementById("mediumAI").style.color = "black";
+    document.getElementById("hardAI").style.color = "black";
+
+//medium button
+  document.getElementById("easyAI").style.backgroundColor = "white";
+  document.getElementById("mediumAI").style.backgroundColor = "white";
+  document.getElementById("hardAI").style.backgroundColor = "white";
+
+  document.getElementById("easyAI").style.color = "black";
+  document.getElementById("mediumAI").style.color = "black";
+  document.getElementById("hardAI").style.color = "black";
+
+//hard button
+  document.getElementById("easyAI").style.backgroundColor = "white";
+  document.getElementById("mediumAI").style.backgroundColor = "white";
+  document.getElementById("hardAI").style.backgroundColor = "white";
+
+  document.getElementById("easyAI").style.color = "black";
+  document.getElementById("mediumAI").style.color = "black";
+  document.getElementById("hardAI").style.color = "black";
     reset();
   } else if (document.getElementById("darkLightTheme").innerHTML == "Light Theme") {
     document.getElementById("darkLightTheme").innerHTML = "Dark Theme";
@@ -660,6 +695,41 @@ function themeSwitch() { // function for switching text of button, Dark Theme <-
     document.body.style.backgroundColor = "black";
     document.getElementById("title").style.color = "white";
     document.getElementById("creator").style.color = "white";
+
+//1 player
+document.getElementById("1or2switch").style.backgroundColor = "black";
+document.getElementById("1or2switch").style.color = "white";
+
+//theme
+document.getElementById("darkLightTheme").style.backgroundColor = "black";
+document.getElementById("darkLightTheme").style.color = "white";
+
+//easy button
+  document.getElementById("easyAI").style.backgroundColor = "black";
+  document.getElementById("mediumAI").style.backgroundColor = "black";
+  document.getElementById("hardAI").style.backgroundColor = "black";
+
+  document.getElementById("easyAI").style.color = "white";
+  document.getElementById("mediumAI").style.color = "white";
+  document.getElementById("hardAI").style.color = "white";
+
+//medium button
+  document.getElementById("easyAI").style.backgroundColor = "black";
+  document.getElementById("mediumAI").style.backgroundColor = "black";
+  document.getElementById("hardAI").style.backgroundColor = "black";
+
+  document.getElementById("easyAI").style.color = "white";
+  document.getElementById("mediumAI").style.color = "white";
+  document.getElementById("hardAI").style.color = "white";
+
+//hard button
+  document.getElementById("easyAI").style.backgroundColor = "black";
+  document.getElementById("mediumAI").style.backgroundColor = "black";
+  document.getElementById("hardAI").style.backgroundColor = "black";
+
+  document.getElementById("easyAI").style.color = "white";
+  document.getElementById("mediumAI").style.color = "white";
+  document.getElementById("hardAI").style.color = "white";
     reset();
   }
 }
@@ -668,16 +738,70 @@ function easyClick() { // if easy button is clicked, sets rules for Easy Ai
   difficulty = 1;
   lastPressed = "O";
   reset();
+
+  if (theme == "Dark") {
+    document.getElementById("easyAI").style.backgroundColor = "white";
+    document.getElementById("mediumAI").style.backgroundColor = "black";
+    document.getElementById("hardAI").style.backgroundColor = "black";
+
+    document.getElementById("easyAI").style.color = "black";
+    document.getElementById("mediumAI").style.color = "white";
+    document.getElementById("hardAI").style.color = "white";
+  } else if (theme == "Light") {
+    document.getElementById("easyAI").style.backgroundColor = "black";
+    document.getElementById("mediumAI").style.backgroundColor = "white";
+    document.getElementById("hardAI").style.backgroundColor = "white";
+
+    document.getElementById("easyAI").style.color = "white";
+    document.getElementById("mediumAI").style.color = "black";
+    document.getElementById("hardAI").style.color = "black";
+  }
 }
 function mediumClick() { // if medium button is clicked, sets rules for Medium Ai
   difficulty = 2;
   lastPressed = "O";
   reset();
+
+  if (theme == "Dark") {
+    document.getElementById("easyAI").style.backgroundColor = "black";
+    document.getElementById("mediumAI").style.backgroundColor = "white";
+    document.getElementById("hardAI").style.backgroundColor = "black";
+
+    document.getElementById("easyAI").style.color = "white";
+    document.getElementById("mediumAI").style.color = "black";
+    document.getElementById("hardAI").style.color = "white";
+  } else if (theme == "Light") {
+    document.getElementById("easyAI").style.backgroundColor = "white";
+    document.getElementById("mediumAI").style.backgroundColor = "black";
+    document.getElementById("hardAI").style.backgroundColor = "white";
+
+    document.getElementById("easyAI").style.color = "black";
+    document.getElementById("mediumAI").style.color = "white";
+    document.getElementById("hardAI").style.color = "black";
+  }
 }
 function hardClick() { // if hard button is clicked, sets rules for Hard Ai
   difficulty = 3;
   lastPressed = "O";
   reset();
+
+if (theme == "Dark") {
+  document.getElementById("easyAI").style.backgroundColor = "black";
+  document.getElementById("mediumAI").style.backgroundColor = "black";
+  document.getElementById("hardAI").style.backgroundColor = "white";
+
+  document.getElementById("easyAI").style.color = "white";
+  document.getElementById("mediumAI").style.color = "white";
+  document.getElementById("hardAI").style.color = "black";
+} else if (theme == "Light") {
+  document.getElementById("easyAI").style.backgroundColor = "white";
+  document.getElementById("mediumAI").style.backgroundColor = "white";
+  document.getElementById("hardAI").style.backgroundColor = "black";
+
+  document.getElementById("easyAI").style.color = "black";
+  document.getElementById("mediumAI").style.color = "black";
+  document.getElementById("hardAI").style.color = "white";
+}
 }
 
 function printWinScore(winner) { // function that prints scoreboard if X or O won
